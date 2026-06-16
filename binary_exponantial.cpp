@@ -2,6 +2,12 @@
 using namespace std;
 double myPow(double x,int n){
     long binForm = n;
+    //for negatve power
+    if(n<0){
+        x = 1/x;
+        binForm = -binForm;
+
+    }
     double ans = 1;
     while (binForm>0){
         if(binForm%2==1){
@@ -14,6 +20,6 @@ double myPow(double x,int n){
 }
 int main(){
     //compute x^n
-cout<<myPow(3,5)<<" ";
+cout<<myPow(-3,5)<<" ";
     return 0;
 }
