@@ -7,7 +7,10 @@ int lp = 0,rp = Water.size()- 1;
 while(lp<rp){
   int   widht = rp - lp;
   int height = min(Water[lp],Water[rp]);
-  maxWater
+  int currentWater = widht*height;
+  maxWater = max(maxWater,currentWater);
+  Water[lp]<Water[rp]?lp++:rp--;
+
 }
 
 
